@@ -1,0 +1,17 @@
+{
+    "LibraryUpdates": {
+      "curl.php": "1.0",
+      "date.php": "1.0",
+      "echo.php": "1.0",
+      "help.php": "1.0",
+      "ip.php": "1.0",
+      "loadingtimes.php": "1.0",
+      "man.php": "1.0",
+      "time.php": "1.0",
+      "check-permissions.php": "1.0",
+      "check-update.php": "1.0",
+      "update.php": "1.0",
+      "set-permissions.php": "1.0",
+      "welcome.php": "1.0"
+    }
+  }
