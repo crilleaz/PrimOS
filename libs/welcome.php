@@ -40,5 +40,5 @@ New release '20.04.6 LTS' available.
 Run 'do-release-upgrade' to upgrade to it.
 
 
-Last login: Thu Jul 13 16:54:15 2023 from 178.174.129.146";
+Last login: $currentDate from $ipAddress";
 ?>
