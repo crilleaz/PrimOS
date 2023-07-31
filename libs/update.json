@@ -12,6 +12,7 @@
       "check-update.php": "1.0",
       "update.php": "1.0",
       "set-permissions.php": "1.0",
-      "welcome.php": "1.1"
+      "welcome.php": "1.0",
+      "ls.php": "1.0"
     }
   }
