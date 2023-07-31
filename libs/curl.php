@@ -1,6 +1,6 @@
 <?php
 $manual = 'Use curl ARG to curl a website, example: curl google.com' . PHP_EOL . 'Example usage: curl google.com';
-$version = '0.1';
+$version = '1.0';
 
 $url = isset($_GET['input']) ? $_GET['input'] : '';
   if ($url !== '') {

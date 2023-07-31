@@ -1,6 +1,6 @@
 <?php
 $manual = 'List files in libs folder.' . PHP_EOL . 'Example usage: ls';
-$version = '0.1';
+$version = '1.0';
 
 $dir = "./";
 $fl = scandir($dir);

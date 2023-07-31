@@ -15,6 +15,9 @@
       "welcome.php": "1.0",
       "ls.php": "1.0",
       "ai.php": "1.0",
-      "will.php": "1.0"
+      "will.php": "1.0",
+      "rm.php": "1.0",
+      "df.php": "1.0"
+      
     }
   }
