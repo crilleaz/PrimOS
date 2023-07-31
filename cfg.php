@@ -1,5 +1,5 @@
 <?php
 
 // OpenAI API Key
-$apiKey = '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';
+$apiKey = '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';
 ?>
