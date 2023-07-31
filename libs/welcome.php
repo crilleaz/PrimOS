@@ -14,9 +14,9 @@ function loadingTimes(){
 
 echo "Welcome to PrimOS 18.04.6 LTS (GNU/Linux 4.15.0-213-generic x86_64)
 
- * Documentation:  https://help.primos.com
- * Management:     https://landscape.primos.com
- * Support:        https://primos.com/advantage
+ * Documentation:  https://github.com/crilleaz/PrimOS/wiki
+ * Management:     https://github.com/crilleaz/PrimOS
+ * Support:        https://github.com/crilleaz/PrimOS/issues
 
   System information as of $currentDate 
   System loaded in " . loadingTimes() . "
