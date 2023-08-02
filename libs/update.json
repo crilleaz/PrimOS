@@ -18,7 +18,9 @@
       "will.php": "1.0",
       "rm.php": "1.0",
       "df.php": "1.0",
-      "img.php": "1.0"
+      "img.php": "1.0",
+      "register.php": "1.0",
+      "get-users.php": "1.0"
 
     }
   }
