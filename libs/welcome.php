@@ -1,6 +1,7 @@
 <?php
 $manual = 'Splash welcoming screen.' . PHP_EOL . 'Example usage: welcome';
 $version = '1.0';
+include_once('../cfg.php');
 
 $currentDate = gmdate('D, d M Y H:i:s \G\M\T');
 $ipAddress = $_SERVER['REMOTE_ADDR']; // Get the user's IP address using PHP
@@ -12,7 +13,52 @@ function loadingTimes(){
     return number_format($loadTime, 6);
 }
 
-echo "Welcome to PrimOS 18.04.6 LTS (GNU/Linux 4.15.0-213-generic x86_64)
+function getDiskUsageInKB($dir) {
+  $io = popen('/usr/bin/du -sk ' . $dir, 'r');
+  $size = fgets($io, 4096);
+  $size = substr($size, 0, strpos($size, "\t"));
+  pclose($io);
+  $sizeInKB = $size;
+
+  return $sizeInKB;
+}
+
+if(getDiskUsageInKB($dir) >= $memory){
+  echo 'System out of memory';
+  exit();
+}
+
+  function formatBytes($bytes, $precision = 2) {
+    $units = ['B', 'KB', 'MB', 'GB', 'TB'];
+    $bytes = max($bytes, 0);
+    $pow = floor(($bytes ? log($bytes) : 0) / log(1024));
+    $pow = min($pow, count($units) - 1);
+    $bytes /= (1 << (10 * $pow));
+
+    return round($bytes, $precision) . ' ' . $units[$pow];
+      
+  }
+  $memoryUsed = memory_get_usage(true);
+
+  function getTotalLibs(){
+    $directory = "./";
+    // Returns an array of files
+    $files = scandir($directory);
+
+    // Count the number of files and store them inside the variable..
+    // Removing 2 because we do not count '.' and '..'.
+    return $files = count($files)-2;
+  }
+
+  function getSystemInfo($opt){
+    if($opt == 1){
+      return PHP_VERSION;
+    }elseif($opt == 2){
+      return PHP_OS;
+    }
+  }
+
+echo "Welcome to PrimOS 18.04.6 LTS (".getSystemInfo($opt=1).")
 
  * Documentation:  https://github.com/crilleaz/PrimOS/wiki
  * Management:     https://github.com/crilleaz/PrimOS
@@ -22,10 +68,11 @@ echo "Welcome to PrimOS 18.04.6 LTS (GNU/Linux 4.15.0-213-generic x86_64)
   System loaded in " . loadingTimes() . "
 
 
-  System load:  0.0                Processes:             231
-  Usage of /:   4.3% of 245.01GB   Users logged in:       0
-  Memory usage: 9%                 IP address for ens160: $ipAddress
+  System load:  0.0                Libraries: ".getTotalLibs()."
+  PHP Memory usage: ". formatBytes($memoryUsed) ."           IP address for ens160: $ipAddress
+  Usage of /:   " . getDiskUsageInKB($dir = "./") . " of ".$memory." KB
   Swap usage:   0%
+  Users logged in:  0
 
 Expanded Security Maintenance for Applications is not enabled.
 
