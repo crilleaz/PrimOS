@@ -12,7 +12,7 @@ $db_host = '';
 $db_table= 'users'; // Table name
 
 // OpenAI API Key
-$apiKey = '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';
+$apiKey = 'sk-';
 
 
 
