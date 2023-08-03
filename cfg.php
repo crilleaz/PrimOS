@@ -14,7 +14,8 @@ $db_table= 'users'; // Table name
 // OpenAI API Key
 $apiKey = 'sk-';
 
-
+// Discord webhook URL
+$webhookURL = '';
 
 // Do not change anything below
 $pVersion = '1.0';
