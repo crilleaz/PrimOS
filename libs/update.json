@@ -20,7 +20,11 @@
       "df.php": "1.0",
       "img.php": "1.0",
       "register.php": "1.0",
-      "get-users.php": "1.0"
+      "get-users.php": "1.0",
+      "pwd.php": "1.0",
+      "cd.php": "1.0",
+      "mkdir.php": "1.0",
+      "rmdir.php": "1.0"
 
     }
   }

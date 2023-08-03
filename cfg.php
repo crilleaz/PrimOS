@@ -1,7 +1,7 @@
 <?php
 
 // System settings 
-$memory = 100; // Total memory in KB
+$memory = 1000; // Total memory in KB
 
 // Several libraries are using a common database connection.
 // Database credentials
