@@ -80,7 +80,7 @@
       },
       {
         greetings: welcomeMessage, // Use the fetched welcome message
-        prompt: 'root@dev:~# ',
+        prompt: 'root@dev:/home# ',
         name: 'PrimOS',
       }
     );
